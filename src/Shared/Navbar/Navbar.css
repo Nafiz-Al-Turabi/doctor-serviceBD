@@ -1,0 +1,27 @@
+/* .animated {
+  background-color: #74d1c6;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.animated.scrolled {
+  background-color: #74d1c6; 
+  height: auto;
+  box-shadow: 0 0 3em #7c7c7c;
+  transition: background-color 0.3s ease, height 0.3s ease;
+  animation: slideDown 0.5s forwards;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+} */

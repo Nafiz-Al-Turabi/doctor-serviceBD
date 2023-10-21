@@ -12,10 +12,10 @@ const WhatsappButton = () => {
 
   return (
     <button
-      className="fixed bottom-32 right-0 p-4 cursor-pointer "
+      className="fixed bottom-32 -right-2 p-4 cursor-pointer "
       onClick={handleWhatsAppButtonClick}
     >
-      <img className='rounded-full' src="https://i.ibb.co/PMyhfyS/icons8-whatsapp.gif" alt="" />
+      <img className='w-16 h-16' src="https://i.ibb.co/pPWxwKh/whatsapp.gif" alt="" />
     </button>
   );
 };

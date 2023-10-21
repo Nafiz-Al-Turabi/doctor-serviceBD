@@ -10,7 +10,7 @@ const CallMeButton = () => {
   return (
     <div className="fixed bottom-16 right-0 p-4 ">
       <button
-        className="primary-bg hover:bg-[#e74e84] duration-500 rounded-full text-white font-bold py-2 px-2"
+        className="secondary-bg hover:bg-[#74d1c6] duration-500 rounded-full text-white font-bold py-2 px-2"
         onClick={handleCallMeButtonClick}
       >
         <BiPhoneCall className='w-8 h-8 '/>

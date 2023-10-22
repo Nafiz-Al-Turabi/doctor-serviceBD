@@ -54,7 +54,7 @@ const Chart = () => {
             </div>
             <AreaChart width={500} height={250} data={data}
                 margin={{ top: 10, right: 30, left: 0, bottom: 0 }}>
-                
+
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />

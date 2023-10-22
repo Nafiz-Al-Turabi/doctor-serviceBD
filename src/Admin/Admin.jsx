@@ -38,7 +38,7 @@ const Admin = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/admin/user" className="flex items-center p-3 rounded-lg hover:bg-[#e74e84] duration-300">
+                        <Link to="/admin/doctors" className="flex items-center p-3 rounded-lg hover:bg-[#e74e84] duration-300">
                             <FaUserDoctor className="mr-2" />
                             Doctors
                         </Link>

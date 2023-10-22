@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { FaUserGroup, FaUserDoctor, FaCalendarPlus } from "react-icons/fa6";
 import { AiOutlinePlusCircle } from "react-icons/ai";
-import Chart from '../Chart';
-import { Link } from 'react-router-dom';
+import Chart from '../Chart/Chart';
 
 
 const Dashboard = () => {
@@ -71,7 +70,6 @@ const Dashboard = () => {
                 </div>
             </div>
             <Chart></Chart>
-
         </div>
     );
 };

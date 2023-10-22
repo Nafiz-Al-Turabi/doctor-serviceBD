@@ -4,8 +4,9 @@ import {
 import Main from "../Layouts/Main";
 import Home from "../Home/Home/Home";
 import Admin from "../Admin/Admin";
+import Dashboard from "../AdminComponents/DashBoard/Dashboard";
 import User from "../AdminComponents/User/User";
-import Dashboard from "../AdminComponents/User/DashBoard/Dashboard";
+import Doctors from "../AdminComponents/Doctors/Doctors";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
         path: 'user',
         element: <User></User>
 
+      },
+      {
+        path:'doctors',
+        element:<Doctors></Doctors>
       }
     ]
   }

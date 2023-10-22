@@ -39,7 +39,7 @@ const Dashboard = () => {
                 </div>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-20 lg:gap-5 mt-20'>
-                <div className="bg-gray-50 h-[120%] shadow-lg rounded-lg relative  ">
+                <div className="bg-gray-50 h-[120%] shadow-lg rounded-lg relative border-t-4 border-emerald-500  ">
                     <div className='float-right p-3 '>
                         <p className='text-gray-600 text-md font-semibold '>Total Patient</p>
                         <p className='float-right text-5xl font-bold text-emerald-500'>56</p>
@@ -49,7 +49,7 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                <div className="bg-gray-50 h-[120%] shadow-lg rounded-lg relative ">
+                <div className="bg-gray-50 h-[120%] shadow-lg rounded-lg relative border-t-4 border-[#74d1c6]">
                     <div className='float-right p-3 '>
                         <p className='text-gray-600 text-md font-semibold '>Total Doctors</p>
                         <p className='float-right text-5xl font-bold text-[#74d1c6] '>93</p>
@@ -59,7 +59,7 @@ const Dashboard = () => {
                     </div>
                 </div>
 
-                <div className="bg-gray-50 h-[120%] shadow-lg rounded-lg relative ">
+                <div className="bg-gray-50 h-[120%] shadow-lg rounded-lg relative border-t-4 border-rose-500 ">
                     <div className='float-right p-3 '>
                         <p className='text-gray-600 text-md font-semibold '>Appointment</p>
                         <p className='float-right text-5xl font-bold text-rose-500'>56</p>

@@ -1,12 +1,15 @@
 import React from 'react';
 import Banner from '../../components/Banner/Banner';
 import Demo from '../../components/Demo/Demo';
+import OurDoctor from '../OurDoctor/OurDoctor';
+import OurSpecialist from '../OurSpecialist/OurSpecialist';
 
 const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <Demo></Demo>
+            <OurDoctor></OurDoctor>
+            <OurSpecialist></OurSpecialist>
         </div>
     );
 };

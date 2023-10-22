@@ -117,6 +117,9 @@ const Navbar = () => {
             <Link to="/" className="text-white font-medium hover:text-[#e74e84] duration-300">
               About Us
             </Link>
+            <Link to="/admin/dashboard" className="text-white font-medium hover:text-[#e74e84] duration-300">
+            Admin
+          </Link>
             <button className="hidden md:block lg:block -mt-2">
               < BiUserCircle className="text-4xl text-white" />
             </button>

@@ -4,11 +4,11 @@ const Footer = () => {
   return (
     <footer className="bg-gray-900 text-white ">
       <div className="container mx-auto py-8 ">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 pl-5 md:px-6 lg:pl-0">
-          <div className="md:col-span-3 lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 pl-5 md:px-6 lg:pl-0 ">
+          <div className="md:col-span-3 lg:col-span-1 pl-4">
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p>123 Main Street</p>
-            <p>New York, NY 10001</p>
+            <p>Islami Bank Hospital Rajshahi,Building 01 </p>
+            <p>Rajshahi, Bangladesh.</p>
             <p>Email: contact@doctorservice.com</p>
             <p>Phone: (123) 456-7890</p>
           </div>

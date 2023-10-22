@@ -5,6 +5,7 @@ import Footer from '../Shared/Footer/Footer';
 import HeaderContact from '../Shared/HeaderContact/HeaderContact';
 import WhatsappButton from '../components/WhatsappButton/WhatsappButton';
 import CallMeButton from '../components/CallMeButton/CallMeButton';
+import ScrollToTopButton from '../components/ScrollToTopButton/ScrollToTopButton';
 
 const Main = () => {
     return (
@@ -15,6 +16,7 @@ const Main = () => {
             <Footer></Footer>
             <WhatsappButton></WhatsappButton>
             <CallMeButton></CallMeButton>
+            <ScrollToTopButton></ScrollToTopButton>
         </div>
     );
 };

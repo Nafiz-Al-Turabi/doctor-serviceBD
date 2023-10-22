@@ -15,7 +15,7 @@ const UserTable = () => {
     return (
         <div>
             <h2 className="text-gray-500 font-semibold mb-4">Dashboard / <span className='primary-text'>Users</span></h2>
-            <div className="w-full overflow-x-auto">
+            <div className="w-full overflow-x-auto shadow-lg">
                 <table className="min-w-full bg-white shadow-lg rounded-lg overflow-hidden">
                     <thead>
                         <tr>
@@ -24,9 +24,9 @@ const UserTable = () => {
                             <th className="px-6 py-3 bg-[#74d1c6]"></th>
                         </tr>
                     </thead>
-                    <tbody className="bg-white">
+                    <tbody className="bg-white border">
                         {users.map((user) => (
-                            <tr key={user.id}>
+                            <tr className='hover:bg-gray-100 duration-300 ease-linear hover:text-white' key={user.id}>
                                 <td className="px-6 py-4 border-b border-gray-300">
                                     <div className="flex items-center space-x-4">
                                         <div className="flex-shrink-0 h-10 w-10">

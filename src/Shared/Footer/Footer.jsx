@@ -1,62 +1,78 @@
 import React from 'react';
+import logo from '../../assets/logo.png'
+import './Footer.css'
+import { BiSolidPhoneCall, BiLocationPlus } from "react-icons/bi";
+import { AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white ">
-      <div className="container mx-auto py-8 ">
+    <footer className=" text-white ">
+      <div className="container footer-image  mx-auto py-20 ">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 pl-5 md:px-6 lg:pl-0 ">
-          <div className="md:col-span-3 lg:col-span-1 pl-4">
-            <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
-            <p>Islami Bank Hospital Rajshahi,Building 01 </p>
-            <p>Rajshahi, Bangladesh.</p>
-            <p>Email: contact@doctorservice.com</p>
-            <p>Phone: (123) 456-7890</p>
+          <div className="md:col-span-3 lg:col-span-1 space-y-4 text-gray-400 lg:pl-4">
+            <img className='h-20 ' src={logo} alt="" />
+            <p>Lorem ipsum dolor, sit amet earum consectetur adipisicing elit. Cupiditate rerum quidem fugiat sapiente! Iusto quae perspiciatis, repudiandae ipsam minus et ex, aliquid dolor molestias, earum enim officiis porro obcaecati.</p>
           </div>
-          <div className="md:col-span-1">
-            <h2 className="text-2xl font-bold mb-4">Links</h2>
-            <ul>
-              <li><a href="/about" className="hover:text-blue-400">About Us</a></li>
-              <li><a href="/services" className="hover:text-blue-400">Our Services</a></li>
-              <li><a href="/appointments" className="hover:text-blue-400">Appointments</a></li>
-              <li><a href="/blog" className="hover:text-blue-400">Blog</a></li>
+          <div className="md:col-span-1 ">
+            <h2 className="text-2xl font-bold mb-4  primary-text">Departments</h2>
+            <ul className='space-y-3'>
+              <li className="text-gray-400 hover:translate-x-1 duration-300 "><a href="/" >Surgery & Radiology</a></li>
+              <li className="text-gray-400 hover:translate-x-1 duration-300 "><a href="/" >Children Care</a></li>
+              <li className="text-gray-400 hover:translate-x-1 duration-300 "><a href="/" >Orthopedics</a></li>
+              <li className="text-gray-400 hover:translate-x-1 duration-300 "><a href="/" >Nuclear Magnetic</a></li>
+              <li className="text-gray-400 hover:translate-x-1 duration-300 "><a href="/" >Eye Treatment</a></li>
+              <li className="text-gray-400 hover:translate-x-1 duration-300 "><a href="/" >X-Ray</a></li>
             </ul>
           </div>
-          <div className="md:col-span-1">
-            <h2 className="text-2xl font-bold mb-4">Departments</h2>
-            <ul>
-              <li><a href="/departments/cardiology" className="hover:text-blue-400">Cardiology</a></li>
-              <li><a href="/departments/dermatology" className="hover:text-blue-400">Dermatology</a></li>
-              <li><a href="/departments/orthopedics" className="hover:text-blue-400">Orthopedics</a></li>
-              <li><a href="/departments/pediatrics" className="hover:text-blue-400">Pediatrics</a></li>
-            </ul>
+
+
+          <div className="md:col-span-1 pr-2">
+            <h2 className="text-2xl font-bold mb-4  primary-text">Opening Hours</h2>
+            <div className='flex justify-between border-b-2 border-[#74d1c6] pb-4'>
+              <p>Mon-Tue:</p>
+              <p>6:00 AM - 10:00 PM</p>
+            </div>
+            <div className='flex justify-between border-b-2 border-[#74d1c6] py-4'>
+              <p>Wed-Thu:</p>
+              <p>6:00 AM - 10:00 PM</p>
+            </div>
+            <div className='flex justify-between border-b-2 border-[#74d1c6] py-4'>
+              <p>Fry:</p>
+              <p>6:00 AM - 04:00 PM</p>
+            </div>
+            <div className='flex justify-between border-b-2 border-[#74d1c6] py-4'>
+              <p>Sun:</p>
+              <p>closed</p>
+            </div>
           </div>
-          <div className="md:col-span-1">
-            <h2 className="text-2xl font-bold mb-4">Opening Hours</h2>
-            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-            <p>Saturday: 9:00 AM - 3:00 PM</p>
-            <p>Sunday: Closed</p>
+          <div className='space-y-4'>
+            <h1 className="text-2xl font-bold mb-4  primary-text">Get In Touch</h1>
+            <div className='flex gap-1'>
+              <BiSolidPhoneCall className='mt-1 text-lg primary-text' />
+              <div>
+                Hotline:<br />
+                Phone: +822456974
+              </div>
+            </div>
+            <div className='flex gap-1'>
+              <AiOutlineMail className='mt-1 text-lg primary-text' />
+              <div>
+                Email:<br />
+                hello@corf.com
+              </div>
+            </div>
+            <div className='flex gap-1'>
+              <BiLocationPlus className='mt-1 text-lg primary-text'  />
+              <div>
+                Address:<br />
+                123, Western Road, Melbourne Australia
+              </div>
+            </div>
           </div>
-          {/* <div className="md:col-span-1">
-            <h2 className="text-2xl font-bold mb-4">Newsletter</h2>
-            <p>Subscribe to our newsletter for updates and promotions.</p>
-            <form className="mt-4">
-              <input
-                type="email"
-                placeholder="Your email"
-                className="w-full p-2 rounded border border-gray-600"
-              />
-              <button
-                type="submit"
-                className="bg-blue-400 text-white py-2 px-4 rounded mt-2 hover:bg-blue-600"
-              >
-                Subscribe
-              </button>
-            </form>
-          </div> */}
         </div>
-        <hr className="border-t border-gray-700 my-6" />
-        <p className="text-center text-sm">&copy; {new Date().getFullYear()} Doctor Service. All rights reserved.</p>
+
       </div>
+      <p className="text-center text-sm bg-[#2f0a17ea] py-6">&copy; {new Date().getFullYear()} Doctor Service. All rights reserved.</p>
     </footer>
   );
 }

@@ -1,0 +1,7 @@
+.footer-image {
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0.775), rgba(0, 0, 0, 1.775)), url('../../assets/footer.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    /* height: 400px; */
+}

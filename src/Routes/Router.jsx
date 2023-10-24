@@ -9,6 +9,7 @@ import User from "../AdminComponents/User/User";
 import Doctors from "../AdminComponents/Doctors/Doctors";
 import AddDoctor from "../AdminComponents/AddData/AddDoctor/AddDoctor";
 import SignIn from "../components/SignIn/SignIn";
+import SignUp from "../components/SignUp/SignUp";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path:'/login',
         element:<SignIn></SignIn>
+      },
+      {
+        path:'/signup',
+        element:<SignUp></SignUp>
       }
     ]
   },

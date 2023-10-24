@@ -7,7 +7,7 @@ import { AiOutlineMail } from "react-icons/ai";
 const Footer = () => {
   return (
     <footer className=" text-white ">
-      <div className="container footer-image  mx-auto py-20 ">
+      <div className=" footer-image   py-20 ">
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8 pl-5 md:px-6 lg:pl-0 ">
           <div className="md:col-span-3 lg:col-span-1 space-y-4 text-gray-400 lg:pl-4">
             <img className='h-20 ' src={logo} alt="" />
@@ -37,7 +37,7 @@ const Footer = () => {
               <p>6:00 AM - 10:00 PM</p>
             </div>
             <div className='flex justify-between border-b-2 border-[#74d1c6] py-4'>
-              <p>Fry:</p>
+              <p>Fri:</p>
               <p>6:00 AM - 04:00 PM</p>
             </div>
             <div className='flex justify-between border-b-2 border-[#74d1c6] py-4'>
@@ -51,21 +51,21 @@ const Footer = () => {
               <BiSolidPhoneCall className='mt-1 text-lg primary-text' />
               <div>
                 Hotline:<br />
-                Phone: +822456974
+                Phone: +8801331-5656565
               </div>
             </div>
             <div className='flex gap-1'>
               <AiOutlineMail className='mt-1 text-lg primary-text' />
               <div>
                 Email:<br />
-                hello@corf.com
+                doctorservicebd@gmail.com
               </div>
             </div>
             <div className='flex gap-1'>
               <BiLocationPlus className='mt-1 text-lg primary-text'  />
               <div>
                 Address:<br />
-                123, Western Road, Melbourne Australia
+                Islami Bank Hospital, Building-1,Rajshahi.
               </div>
             </div>
           </div>

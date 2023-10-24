@@ -62,7 +62,7 @@ const Admin = () => {
                         </Link>
                     </li>
                 </ul>
-                <button className="md:hidden fixed top-1 right-1 rotate-180" onClick={closeDrawer}>
+                <button className="md:hidden fixed top-1 right-1 rotate-180 " onClick={closeDrawer}>
                     <FaSignOutAlt className="text-gray-700 text-2xl" />
                 </button>
             </nav>

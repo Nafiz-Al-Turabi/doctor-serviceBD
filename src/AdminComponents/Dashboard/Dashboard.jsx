@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { FaUserGroup, FaUserDoctor, FaCalendarPlus } from "react-icons/fa6";
 import { AiOutlinePlusCircle } from "react-icons/ai";
 import Chart from '../Chart/Chart';
+import { Link } from 'react-router-dom';
 
 
 const Dashboard = () => {
@@ -27,12 +28,15 @@ const Dashboard = () => {
                         <div className="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
                             <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                                 {/* Your dropdown items go here */}
-                                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                <Link to="/admin/adddoctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                                     Add Doctor
-                                </a>
-                                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                </Link>
+                                <Link to="/adddoctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                                     Add Hospital
-                                </a>
+                                </Link>
+                                <Link to="/adddoctor" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
+                                    Add Diagnostic
+                                </Link>
                             </div>
                         </div>
                     )}

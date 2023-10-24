@@ -1,0 +1,13 @@
+
+.about-icon{
+    background-color: #f1f1f1;
+    height: 30px;
+    width: 30px;
+    padding: 6px;
+    border-radius: 50%;
+}
+.about-item:hover .about-icon{
+    background-color: #74d1c6;
+    color: #fff;
+    transition: .6s ease-in-out;
+}

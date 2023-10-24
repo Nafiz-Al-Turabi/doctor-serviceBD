@@ -7,6 +7,8 @@ import Admin from "../Admin/Admin";
 import Dashboard from "../AdminComponents/DashBoard/Dashboard";
 import User from "../AdminComponents/User/User";
 import Doctors from "../AdminComponents/Doctors/Doctors";
+import AddDoctor from "../AdminComponents/AddData/AddDoctor/AddDoctor";
+import SignIn from "../components/SignIn/SignIn";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -15,6 +17,10 @@ export const router = createBrowserRouter([
       {
         path: '/',
         element: <Home></Home>
+      },
+      {
+        path:'/login',
+        element:<SignIn></SignIn>
       }
     ]
   },
@@ -23,17 +29,21 @@ export const router = createBrowserRouter([
     element: <Admin></Admin>,
     children: [
       {
-        path:'dashboard',
-        element:<Dashboard></Dashboard>
-        },
+        path: 'dashboard',
+        element: <Dashboard></Dashboard>
+      },
       {
         path: 'user',
         element: <User></User>
 
       },
       {
-        path:'doctors',
-        element:<Doctors></Doctors>
+        path: 'doctors',
+        element: <Doctors></Doctors>
+      },
+      {
+        path: 'adddoctor',
+        element:<AddDoctor></AddDoctor>
       }
     ]
   }

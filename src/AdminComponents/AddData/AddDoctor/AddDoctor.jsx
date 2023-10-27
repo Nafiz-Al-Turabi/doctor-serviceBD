@@ -1,13 +1,54 @@
 import { useForm } from "react-hook-form";
 
+
+const image_hosting_token = import.meta.env.VITE_Image_Key;
 const AddDoctor = () => {
     const {
         register,
         handleSubmit,
+        reset,
         formState: { errors },
     } = useForm();
-
-    const onSubmit = (data) => console.log(data);
+    
+    const image_hosting_url = `https://api.imgbb.com/1/upload?&key=${image_hosting_token}`
+    
+    const onSubmit = (data, e) => {
+        const formData = new FormData();
+        formData.append("image", data.image[0]);
+    
+        fetch(image_hosting_url, {
+            method: "POST",
+            body: formData
+        })
+        .then(res => res.json())
+        .then(imageResult => {
+            if (imageResult.success) {
+                const imgURL = imageResult.data.display_url;
+                const { doctor_name, degree, specialist, chamber, video_link, old_price, new_price, doctor_description } = data;
+                const newItem = { doctor_name, degree, specialist, chamber, video_link, old_price: parseFloat(old_price), new_price: parseFloat(new_price), doctor_description, image: imgURL };
+                console.log(newItem);
+    
+                // Now that you have the image URL, you can send the form data to the server
+                fetch('http://localhost:5000/postdoctor', {
+                    method: "POST",
+                    headers: {
+                        "content-type": "application/json"
+                    },
+                    body: JSON.stringify(newItem)
+                })
+                .then(result => {
+                    console.log(result);
+                    reset();
+                })
+                .catch(error => {
+                    console.log(error.message);
+                });
+            }
+        });
+    
+        console.log(data);
+    }
+    
 
     return (
         <div className="  flex justify-center items-center mt-20 md:mt-20 lg:mt-0">
@@ -48,14 +89,14 @@ const AddDoctor = () => {
                         {errors.degree && <span className="text-red-600">This field is required</span>}
                     </div>
                     <div>
-                        <label className="block text-[#74d1c6] text-sm font-bold mb-2">Category</label>
+                        <label className="block text-[#74d1c6] text-sm font-bold mb-2">Specialist</label>
                         <input
                             className="w-full text-gray-700 font-semibold h-10 pl-3 rounded border border-[#74d1c6] focus:ring focus:ring-[#74d1c6] focus:ring-opacity-50 bg-transparent "
                             type="text"
-                            placeholder="Enter category"
-                            {...register("category", { required: true })}
+                            placeholder="Enter specialist"
+                            {...register("specialist", { required: true })}
                         />
-                        {errors.category && <span className="text-red-600">This field is required</span>}
+                        {errors.specialist && <span className="text-red-600">This field is required</span>}
                     </div>
                     <div>
                         <label className="block text-[#74d1c6] text-sm font-bold mb-2">Chamber</label>
@@ -74,6 +115,24 @@ const AddDoctor = () => {
                             type="text"
                             placeholder="Enter video link"
                             {...register("video_link")}
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-[#74d1c6] text-sm font-bold mb-2">New Price</label>
+                        <input
+                            className="w-full text-gray-700 font-semibold h-10 pl-3 rounded border border-[#74d1c6] focus:ring focus:ring-[#74d1c6] focus:ring-opacity-50 bg-transparent "
+                            type="text"
+                            placeholder="Enter New Price"
+                            {...register("new_price")}
+                        />
+                    </div>
+                    <div>
+                        <label className="block text-[#74d1c6] text-sm font-bold mb-2">Old Price</label>
+                        <input
+                            className="w-full text-gray-700 font-semibold h-10 pl-3 rounded border border-[#74d1c6] focus:ring focus:ring-[#74d1c6] focus:ring-opacity-50 bg-transparent "
+                            type="text"
+                            placeholder="Enter Old Price"
+                            {...register("old_price")}
                         />
                     </div>
                     <div className="lg:col-span-2">

@@ -2,9 +2,12 @@ import React, { useContext } from 'react';
 import google from '../../assets/google-logo.png'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import SocialLogin from '../SocialLogin/SocialLogin';
+import useAuth from '../../Hooks/useAuth';
 
 const SignIn = () => {
-    const { login,googleLogin } = useContext(AuthContext)
+    // const { login } = useContext(AuthContext)
+    const {login}=useAuth()
 
     const logInHandler = event => {
         event.preventDefault();
@@ -22,17 +25,7 @@ const SignIn = () => {
                 console.log(error.message);
             })
     }
-     // google login
-     const googleLoginHandler = () => {
-        googleLogin()
-            .then(result => {
-                const googleUser = result.user;
-                console.log(googleUser);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+    
     return (
         <div className='w-96 mx-auto py-56 md:py-44 lg:py-44'>
             <div className="relative flex  flex-col text-gray-700 bg-white shadow-md w-96 rounded-xl bg-clip-border">
@@ -111,11 +104,7 @@ const SignIn = () => {
                             Sign In
                         </button>
                         <p className='my-4 text-xl font-bold text-center '>Or</p>
-                        <button onClick={googleLoginHandler} className='w-full bg-white shadow-lg py-3 rounded-lg hover:shadow-2xl duration-200 ease-linear active:bg-[#74d1c6]'>
-                            <div className='flex justify-center'>
-                                <img className='w-[20%] ' src={google} alt="" />
-                            </div>
-                        </button>
+                        <SocialLogin></SocialLogin>
                         <p className="flex justify-center mt-6 font-sans text-sm antialiased font-light leading-normal text-inherit">
                             Don't have an account?
                             <Link

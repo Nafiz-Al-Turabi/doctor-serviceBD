@@ -1,0 +1,31 @@
+.find-doctor {
+    background-image: linear-gradient(to bottom, rgba(47, 47, 47, 0.775), rgba(0, 0, 0, 1.775)), url('../../assets/doctors/findDoctor.svg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 400px;
+}
+.find-card {
+    position: relative;
+    overflow: hidden; 
+    transition: all 0.3s ease-out;
+    z-index: 1; 
+}
+
+.find-card .card-overlay {
+    height: 45px;
+    width: 45px;
+    background: #f0f0f0;
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    transform-origin: bottom right; 
+    transform: scale(0); 
+    transition: transform 0.5s ease;
+    z-index: -1; 
+}
+
+.find-card:hover .card-overlay {
+    transform: scale(20); 
+    z-index: -1;
+}

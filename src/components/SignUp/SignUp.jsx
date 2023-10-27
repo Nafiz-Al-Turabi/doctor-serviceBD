@@ -1,10 +1,10 @@
 import { useContext } from 'react';
-import google from '../../assets/google-logo.png'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const SignUp = () => {
-    const {newUser,updateUser,googleLogin}=useContext(AuthContext)
+    const {newUser,updateUser}=useContext(AuthContext)
     const registerHandler = event => {
         event.preventDefault();
         const form = event.target;
@@ -19,7 +19,19 @@ const SignUp = () => {
                 console.log(newUser);
                 updateUser(name)
                 .then(()=>{
-                    console.log('horra');
+                    // add user in database
+                    const saveUser={name: name, email:email}
+                    fetch('http://localhost:5000/users',{
+                        method:"POST",
+                        headers:{
+                            "content-type":"application/json"
+                        },
+                        body:JSON.stringify(saveUser)
+                    })
+                    .then(res=>res.json())
+                    .then(result=>{
+                        console.log(result);
+                    })
                 })
                 event.target.reset();
             })
@@ -28,17 +40,7 @@ const SignUp = () => {
             })
     }
 
-    // google login
-    const googleLoginHandler = () => {
-        googleLogin()
-            .then(result => {
-                const googleUser = result.user;
-                console.log(googleUser);
-            })
-            .catch(error => {
-                console.log(error);
-            })
-    }
+    
     
     return (
         <div className='w-96 mx-auto py-56 md:py-44 lg:py-44'>
@@ -129,14 +131,10 @@ const SignUp = () => {
                             data-ripple-light="true"
 
                         >
-                            Sign In
+                            Sign Up
                         </button>
                         <p className='my-4 text-xl font-bold text-center '>Or</p>
-                        <button onClick={googleLoginHandler} className='w-full bg-white shadow-lg py-3 rounded-lg hover:shadow-2xl duration-200 ease-linear active:bg-[#e74e84]'>
-                            <div className='flex justify-center'>
-                                <img className='w-[20%] ' src={google} alt="" />
-                            </div>
-                        </button>
+                       <SocialLogin></SocialLogin>
                         <p className="flex justify-center mt-6 font-sans text-sm antialiased font-light leading-normal text-inherit">
                             Don't have an account?
                             <Link

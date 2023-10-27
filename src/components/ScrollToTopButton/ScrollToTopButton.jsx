@@ -32,7 +32,7 @@ function ScrollToTopButton() {
         isVisible && (
             <button
                 onClick={scrollToTop}
-                className="scroll-to-top-button z-40">
+                className="scroll-to-top-button z-30">
                 <FaAngleDoubleUp className='text-xl ' />
             </button>
         )

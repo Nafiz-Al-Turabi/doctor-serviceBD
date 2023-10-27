@@ -3,7 +3,7 @@ import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiPaperPlane,BiTime,BiP
 
 const HeaderContact = () => {
   return (
-    <div className="container mx-auto hidden md:block lg:block py-2 px-4">
+    <div className=" hidden md:block lg:block py-2 px-4">
       <div className="flex justify-between items-center">
         <div className="flex space-x-10">
           <p className="secondary-text flex items-center space-x-2 hover:text-[#74d1c6] duration-300"><BiTime className="primary-bg text-white text-2xl rounded-full p-1 mr-2" /> Mon-Fri 9am-5pmCall</p>

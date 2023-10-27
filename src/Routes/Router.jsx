@@ -10,6 +10,9 @@ import Doctors from "../AdminComponents/Doctors/Doctors";
 import AddDoctor from "../AdminComponents/AddData/AddDoctor/AddDoctor";
 import SignIn from "../components/SignIn/SignIn";
 import SignUp from "../components/SignUp/SignUp";
+import UserDashboard from "../UserDashBoardComponents/UserDashboard/UserDashboard";
+import FindDoctor from "../components/FindDoctor/FindDoctor";
+import DoctorDetails from "../components/DoctorDetails/DoctorDetails";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -20,12 +23,20 @@ export const router = createBrowserRouter([
         element: <Home></Home>
       },
       {
-        path:'/login',
-        element:<SignIn></SignIn>
+        path: 'finddoctor',
+        element: <FindDoctor></FindDoctor>
       },
       {
-        path:'/signup',
-        element:<SignUp></SignUp>
+        path: '/doctorDetails',
+        element:<DoctorDetails></DoctorDetails>
+      },
+      {
+        path: '/login',
+        element: <SignIn></SignIn>
+      },
+      {
+        path: '/signup',
+        element: <SignUp></SignUp>
       }
     ]
   },
@@ -38,6 +49,10 @@ export const router = createBrowserRouter([
         element: <Dashboard></Dashboard>
       },
       {
+        path: 'userDashboard',
+        element: <UserDashboard></UserDashboard>
+      },
+      {
         path: 'user',
         element: <User></User>
 
@@ -48,7 +63,7 @@ export const router = createBrowserRouter([
       },
       {
         path: 'adddoctor',
-        element:<AddDoctor></AddDoctor>
+        element: <AddDoctor></AddDoctor>
       }
     ]
   }

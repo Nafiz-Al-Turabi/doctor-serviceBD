@@ -12,7 +12,7 @@ const WhatsappButton = () => {
 
   return (
     <button
-      className="fixed bottom-32 -right-2 p-4 cursor-pointer "
+      className="fixed bottom-32 -right-2 p-4 cursor-pointer z-30"
       onClick={handleWhatsAppButtonClick}
     >
       <img className='w-16 h-16' src="https://i.ibb.co/pPWxwKh/whatsapp.gif" alt="" />
